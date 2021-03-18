@@ -22,4 +22,15 @@ namespace AnyCompany
             connection.Close();
         }
     }
+    //create a wrapped customer class
+    class OrderRepositoryWrapper
+    {
+        private OrderRepository orderRepository;
+
+        public OrderRepositoryWrapper()
+        {
+            orderRepository = new OrderRepository();
+        }
+
+    }
 }

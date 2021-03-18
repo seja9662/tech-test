@@ -1,4 +1,7 @@
-﻿namespace AnyCompany
+﻿using System;
+using System.Text.RegularExpressions;
+
+namespace AnyCompany
 {
     public class OrderService
     {
@@ -20,5 +23,17 @@
 
             return true;
         }
+    }
+    public class OrderServiceWrapper
+    {
+        private OrderService orderService;
+
+        public OrderServiceWrapper()
+        {
+            orderService = new OrderService();
+        
+            return;
+        }
+
     }
 }
