@@ -11,13 +11,13 @@ namespace AnyCompanyTest
         public void Test_PlaceOrder()
         {
             Random orderNum = new Random();
-            OrderService orderService = new OrderService();
+            OrderServiceWrapper orderServiceWrapper = new OrderServiceWrapper();
             Order order = new Order();
 
             order.Amount = 500.00;
             order.OrderId = orderNum.Next(1, 500);
             //order.VAT = 0.15;
-            orderService.PlaceOrder(order, 2); // Fails because of SQl
+            orderServiceWrapper.orderService.PlaceOrder(order, 2); // Fails because of SQl
             //Console.WriteLine(orderService.PlaceOrder(order, 2));
 
             Assert.IsTrue(true);
