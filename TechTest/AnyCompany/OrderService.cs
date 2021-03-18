@@ -26,7 +26,7 @@ namespace AnyCompany
     }
     public class OrderServiceWrapper
     {
-        private OrderService orderService;
+        public OrderService orderService;
 
         public OrderServiceWrapper()
         {
